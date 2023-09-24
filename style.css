@@ -1,0 +1,70 @@
+/* body tag in order to set the background color for the body*/
+body{
+	background-color: #2E4374;
+}
+/* h1 tag that contains the text color, font family and other things it aligns the text to the center of the page and makes it italic. Ontop of this the background color
+for the h1 tag is set to beige and the border radious for it is set to 50% giving it a nice effect from the rest of the page*/
+h1{
+	color: #7C81AD;
+	font-family: times new roman, arial;
+	font-style: italic;
+	text-align: center;
+	background-color: beige;
+	border-radius: 50%
+}
+/*
+H2 tag changes for the text color and font family and underlines the text
+*/
+h2{
+	color: #7C81AD;
+	font-family: times new roman, arial;
+	text-decoration: underline;
+}
+/*
+H3 tag changes for the text color and font family and underlines the text
+*/
+h3{
+	color: #7C81AD;
+	font-family: times new roman, arial;
+	text-decoration: underline;
+}
+/*
+P tag changes the text color and font family and aligns the text via justify
+*/
+p{
+	color: #E5C3A6;
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: justify;
+
+}
+/*
+This div tag wraps all the h3 tags and p tag  the width and height are set to auto and the animation name is set to spinny and the duration is set to 2 seconds
+the iteration count is set to 1 and the timing function is set to ease-in-out
+*/
+div{
+	width: auto;
+	height: auto;
+	animation-name: spinny;
+	animation-duration: 2s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in-out;
+}
+/*
+Sets the color of the link that is visited to the same color as the h1 tag
+*/
+a:visited{
+	color:  #7C81AD;
+}
+
+/*
+Animation for the div tag transform is set to rotate 0 degrees and 360 degrees which basically makes it spin in a circle the animation is called spinny
+
+*/
+@keyframes spinny{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+}
