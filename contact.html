@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for character set and responsive design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title of the webpage -->
+    <title>Contact Us - Lotus Landscaping</title>
+
+    <!-- Link to external CSS stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Page header section -->
+    <header>
+        <!-- Company logo -->
+        <img class="logo" src="assets/logo.png" alt="Lotus Landscaping">
+
+        <!-- Navigation bar with links to different pages -->
+        <nav>
+            <ul>
+                <!-- List of navigation links -->
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main content of the page -->
+    <main>
+        <!-- Contact section -->
+        <section id="contact">
+            <!-- Section heading -->
+            <h2>Contact Lotus Landscaping</h2>
+            <!-- Introductory text -->
+            <p>Have questions or want to start a project? Get in touch with us!</p>
+
+            <!-- Contact form with action pointing to a PHP script for processing -->
+            <form id="contactForm" action="submit.php" method="post">
+                <!-- Form fields for user input -->
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                
+                <!-- Submit button -->
+                <button type="submit">Send message</button>
+            </form>
+            
+            <!-- Display a fake email for a real feeling; actual email is different -->
+            <p>Email us directly at <a href="mailto:info@lotuslandscaping.com">info@lotuslandscaping.com</a></p>
+        </section>
+    </main>
+
+    <!-- Footer of the page -->
+    <footer>
+        <!-- Copyright notice -->
+        <p>&copy; Lotus Landscaping 2023</p>
+    </footer>
+</body>
+</html>

@@ -44,7 +44,7 @@ nav a:hover {
 
 
 #hero {
-    background-image: url("background.jpg"); /* Adds a background image */
+    background-image: url("assets/background.jpg"); /* Adds a background image */
     background-size: cover; /* Ensures the image covers the entire container */
     height: 450px;  /* Sets the height of the container to 450px */
     display: flex;  /* Creates a flex container */
