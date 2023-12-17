@@ -1,70 +1,253 @@
-/* body tag in order to set the background color for the body*/
-body{
-	background-color: #2E4374;
-}
-/* h1 tag that contains the text color, font family and other things it aligns the text to the center of the page and makes it italic. Ontop of this the background color
-for the h1 tag is set to beige and the border radious for it is set to 50% giving it a nice effect from the rest of the page*/
-h1{
-	color: #7C81AD;
-	font-family: times new roman, arial;
-	font-style: italic;
-	text-align: center;
-	background-color: beige;
-	border-radius: 50%
-}
-/*
-H2 tag changes for the text color and font family and underlines the text
-*/
-h2{
-	color: #7C81AD;
-	font-family: times new roman, arial;
-	text-decoration: underline;
-}
-/*
-H3 tag changes for the text color and font family and underlines the text
-*/
-h3{
-	color: #7C81AD;
-	font-family: times new roman, arial;
-	text-decoration: underline;
-}
-/*
-P tag changes the text color and font family and aligns the text via justify
-*/
-p{
-	color: #E5C3A6;
-	font-family: Arial, Helvetica, sans-serif;
-	text-align: justify;
-
-}
-/*
-This div tag wraps all the h3 tags and p tag  the width and height are set to auto and the animation name is set to spinny and the duration is set to 2 seconds
-the iteration count is set to 1 and the timing function is set to ease-in-out
-*/
-div{
-	width: auto;
-	height: auto;
-	animation-name: spinny;
-	animation-duration: 2s;
-	animation-iteration-count: 1;
-	animation-timing-function: ease-in-out;
-}
-/*
-Sets the color of the link that is visited to the same color as the h1 tag
-*/
-a:visited{
-	color:  #7C81AD;
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Sets the font family */
+    margin: 0;  /* Removes the default margin */
+    padding: 0; /* Removes the default padding */
+    color: #333; /* Sets the default text color to gray */
+    background: #f4f4f4; /* Changes the background color to light gray */
 }
 
-/*
-Animation for the div tag transform is set to rotate 0 degrees and 360 degrees which basically makes it spin in a circle the animation is called spinny
+header {
+    background-color:#f4f4f4; /* Changes the background color to light gray */
+    color: navy;    /* Changes the text color to navy */
+    padding: 20px 0;    /* Adds some padding on the top and bottom */
+    text-align: center; /* Centers the text horizontally */
+}
 
-*/
-@keyframes spinny{
-	0%{
-		transform: rotate(0deg);
-	}
-	100%{
-		transform: rotate(360deg);
-	}
+header h1 {
+    margin: 0; /* Removes the default margin */
+    font-size: 2.5em;   /* Increases the font size */
+}
+
+nav ul {
+    list-style: none; /* Removes the default list style */
+    padding: 0; /* Removes the default padding */
+    display: flex; /* Creates a flex container */
+    justify-content: center; /* Centers the flex items horizontally */
+}
+
+nav ul li {
+    margin: 0 15px; /* 0 top and bottom, 15px left and right */
+}
+
+nav a {
+    color: navy;    /* Changes the text color to navy */
+    text-decoration: none; /* Removes the default underline */
+    padding: 5px 10px; /* Adds some padding inside the button */
+    transition: background-color 0.3s; /* Adds a transition effect when the button is hovered */
+}
+
+nav a:hover {
+    background-color: navy; /* Changes the background color on hover *  /
+    color: white; /* Changes the text color on hover */
+    border-radius: 5px; /* Adds rounded corners to the button */
+}
+
+
+#hero {
+    background-image: url("background.jpg"); /* Adds a background image */
+    background-size: cover; /* Ensures the image covers the entire container */
+    height: 450px;  /* Sets the height of the container to 450px */
+    display: flex;  /* Creates a flex container */
+    flex-direction: column; /* Changes the direction of the flex items to a column */
+    justify-content: center;    /* Centers the content horizontally */
+    align-items: center;    /* Centers the content vertically */
+    color: white;   /* Changes the text color to white */
+    text-align: center; /* Centers the text horizontally */
+    padding: 20px;  /* Adds some padding on the top and bottom */
+}
+
+#hero h2 {
+    font-size: 2em; /* Increases the font size */
+    margin-bottom: 10px;    /* Adds some space between the header and the text */
+    color: navy; /* Changes the text color to navy */
+
+}
+
+#hero p {
+    font-size: 1.1em;   /* Increases the font size */
+    line-height: 1.5;   /* Increases the line height */
+    max-width: 600px;   /* Sets the maximum width of the text to 600px */
+    margin: auto;   /* Centers the text horizontally */
+    color: black /* Changes the text color to black */
+}
+#services h2{
+    text-align: center; /* Centers the text horizontally */
+    margin-top: 20px;   /* Adds some space between the header and the text */
+    color: navy;    /* Changes the text color to navy */
+    align-items: center; /* Centers the text vertically */
+}
+#services ul{
+    display: flex; /* Creates a flex container */
+    justify-content: center; /* Centers the flex items horizontally */
+    align-items: center;    /* Centers the text vertically */
+    flex-wrap: wrap;    /* Allows the flex items to wrap */
+    margin-top: 20px;   /* Adds some space between the header and the services */
+    gap: 20px;  /* Adds some space between the services */
+    list-style: none;   /* Removes the default list style */
+    margin-bottom: 50px;    /* Adds some space between the header and the services */
+    font-weight: 200%; /* Increases the font weight */
+
+}
+
+#portfolio h2{
+    text-align: center; /* Centers the text horizontally */
+    margin-top: 20px;   /* Adds some space between the header and the text */
+    color: navy;    /* Changes the text color to navy */
+    align-items: center;    /* Centers the text vertically */
+}
+.button {
+    background-color: none;    /* Removes the default background color */
+    color: navy;    /* Changes the text color to navy */
+    padding: 10px 20px; /* Adds some padding inside the button */
+    border-radius: 5px; /* Adds rounded corners to the button */
+    margin-top: 20px; /* Adds some space between the header and the button */
+    transition: background-color 0.3s, color 0.3, border-color 0.3s;    /* Adds a transition effect when the button is hovered */
+    border-style: solid;    /* Adds a solid border to the button */
+    border-color: navy; /* Adds a navy border color to the button */
+}
+
+.button:hover {
+    background-color: navy; /* Changes the background color on hover */
+    color: white;   /* Changes the text color on hover */
+    border-color: gray  /* Changes the border color on hover */
+}
+
+.gallery {
+    display: grid; /* Creates a grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));    /* Creates a grid with a minimum width of 250px and a maximum width of 1fr */
+    gap: 15px;  /* Adds some space between the images */
+    margin-top: 20px;   /* Adds some space between the header and the gallery */
+}
+
+.gallery img {
+    width: 100%;    /* Ensures the image takes up the full width of its container */
+    height: auto;   /* Ensures the image doesn't get distorted */
+    border-radius: 8px; /* Rounded corners */
+}
+
+footer {
+    text-align: center; /* Centers the text horizontally */
+    padding: 20px 0;    /* Adds some padding on the top and bottom */
+    background: #333;   /* Changes the background color to black */
+    color: white; /* Changes the text color to white */
+}
+
+@media screen and (max-width: 768px) {  /* Media query for screens smaller than 768px */
+    nav ul {
+        flex-direction: column; /* Changes the direction of the flex items to a column */
+        margin-top: 20px;   /* Adds some space between the header and the nav */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* 10px top and bottom */
+    }
+}
+
+#contact{
+    display: grid;  /* Creates a grid layout */
+    justify-content: center;    /* Centers the content horizontally */
+    align-items: center;    /* Centers the content vertically */
+    min-height: 70vh;   /* Sets the minimum height of the container to 70vh */
+}
+
+#contact h2{
+    text-align: center; /* Centers the text */
+    color: navy;    /* Changes the text color to navy */
+    align-items: center; /* Centers the text */
+}
+
+form label, form input, form textarea, form button {
+    display: block; /* Makes each element take the full width */
+    width: 100%; /* Ensures each element spans the full container width */
+    margin-bottom: 30px; /* Adds some space between each element */
+    
+}
+
+form input, form textarea, form button {
+    padding: 10px; /* Adds some padding inside the input fields and button for better aesthetics */
+    border: 1px solid #ccc; /* Adds a subtle border to the inputs and textarea */
+    border-radius: 4px; /* Rounds the corners of the inputs and button */
+    resize: none; /* Ensures the textarea doesn't get resized beyond its initial size */
+    
+}
+
+form textarea {
+    height: 150px; /* Creates a textarea with a height of 150px */
+}
+
+form label {
+    margin-bottom: 5px; /* Reduces space between label and its corresponding input field */
+}
+
+form button{
+    width: 40%; /* Makes the button take up 40% of the container */
+    background-color: navy; /* Adds a navy background color to the button */
+    color: white; /* Adds a white text color to the button */
+    border-style: solid;    /* Adds a solid border to the button */
+    border-color: white;    /* Adds a white border color to the button */
+    display: block; /* Makes the button take up the full width */
+    margin-left: auto;  /* Centers the button */
+    margin-right: auto; /* Centers the button */
+}
+
+form button:hover{
+    background-color: white;    /* Changes the background color on hover */
+    color: navy;    /* Changes the background color and text color on hover */
+    border-color: navy; /* Changes the background color, text color, and border color on hover */
+}
+.container{
+    position: relative; /* Position the container */
+
+}
+img{
+    position: relative; /* Position the image */
+    left: 50%;  /* Adjust the left value using left: 50% */
+    transform: translate( -50%); /* Adjust the left value using transform translate */
+    height: 350px; /* Adjust the height to 350px */
+    width: 700px; /* Adjust the width to 700px */
+}
+
+
+
+.prev,
+.next {
+  cursor: pointer;  /* Cursor on hover */
+  position: absolute; /* Position the buttons */
+  top: 40%;  
+  width: auto;  /* Adjust with width: 5%; */
+  padding: 16px;    /* Adjust with padding: 0 10px; */
+  margin-top: -50px;    /* Adjust with top: 40% */
+  color: navy;  /* Font color */
+  font-weight: bold;    /* Increase font weight */
+  font-size: 20px;  /* Increase font size */
+  border-radius: 0 3px 3px 0;   /* Rounded corners on the left side */
+  user-select: none;    /* Standard syntax */
+  -webkit-user-select: none;    /* Safari 3.1+ */
+}
+
+.next {
+    right: 0;   /* Adjust with right: 0 */
+    border-radius: 3px 0 0 3px; /* Rounded corners on the right side */
+  }
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.2); /* Black w/opacity/see-through */
+}
+
+.imagenum{
+    color: white;
+    position: absolute;
+    top: 0; /* Adjust as needed */
+    left: 31%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for exact centering */
+    z-index: 10; 
+  }
+
+  .logo {
+    width: 100%; /* or a fixed width, e.g., 200px */
+    height: 100px; /* fixed height */
+    object-fit: contain; /* maintain the aspect ratio without cropping */
+    display: block; /* makes it a block-level element */
+    margin: 0 auto; /* centers it horizontally */
 }
